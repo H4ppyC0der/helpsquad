@@ -17,7 +17,7 @@ const AgentSchedule = ({ data }) => {
     var dateStr = "05/23/2014";
     var day = getDayName(dateStr, "en");
     return (
-        <div className="h-full flex flex-col justify-start gap-4 shadow-lg shadow-slate-300 p-2 border-b-2 ">
+        <div className="h-full flex flex-col justify-start gap-4 divide-y-2 shadow-lg shadow-slate-300 p-2 border-b-2 ">
             {Array.from(Array(endDate)).map((e, num) => (
                 <Daily
                     key={num}
