@@ -19,8 +19,8 @@ const Daily = ({ data, currentDate, dayOff }) => {
         currentDate.toLocaleDateString("en", { weekday: "long" })
     ) ? (
         <ul className="text-center text-sm">
-            <li className="border-b-[1px]">{currentDate.toDateString()}</li>
             <li className="bg-slate-100 text-slate-100">0</li>
+            <li className="border-b-[1px]">{currentDate.toDateString()}</li>
             <li className="bg-slate-900 text-slate-100">OFF</li>
             <li className="bg-slate-100 text-slate-100">0</li>
         </ul>
