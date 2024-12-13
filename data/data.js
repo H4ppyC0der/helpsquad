@@ -104,12 +104,12 @@ export const usersData = [
         schedule: [
             {
                 Monday: "off",
-                Tuesday: "off",
+                Tuesday: ["4:00 am - 8:00 am", "8:30 am - 12:00 pm"],
                 Wednesday: ["4:00 am - 8:00 am", "8:30 am - 12:00 pm"],
                 Thursday: ["4:00 am - 8:00 am", "8:30 am - 12:00 pm"],
                 Friday: ["4:00 am - 8:00 am", "8:30 am - 12:00 pm"],
                 Saturday: ["4:00 am - 8:00 am", "8:30 am - 12:00 pm"],
-                Sunday: ["4:00 am - 8:00 am", "8:30 am - 12:00 pm"],
+                Sunday: "off",
             },
         ],
     },
