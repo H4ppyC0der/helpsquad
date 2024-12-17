@@ -36,8 +36,6 @@ const Search = () => {
                 : setCancelSearchDisplay("hidden");
             setLoading(false);
             console.log(resultList);
-            // console.log(searchWord);
-            // console.log(resultList);
         }
     }, [searchWord]);
 
