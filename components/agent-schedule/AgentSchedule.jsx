@@ -1,5 +1,6 @@
 import React from "react";
 import Daily from "../daily/Daily";
+import { useCalendarStore } from "@/store/calendar-store";
 
 function getDayName(dateStr, locale) {
     var date = new Date(dateStr);
@@ -7,9 +8,7 @@ function getDayName(dateStr, locale) {
 }
 
 const AgentSchedule = ({ data }) => {
-    const date = new Date();
-    const month = date.getMonth();
-    const year = date.getFullYear();
+    const { month, year } = useCalendarStore();
     const start = new Date(year, month, 1).getDay();
     const endDate = new Date(year, month + 1, 0).getDate(); //getting the current month end day
     const end = new Date(year, month, endDate).getDay();
@@ -17,7 +16,7 @@ const AgentSchedule = ({ data }) => {
     var dateStr = "05/23/2014";
     var day = getDayName(dateStr, "en");
     return (
-        <div className="h-full flex flex-col justify-start gap-4 divide-y-[1px] divide-slate-400  shadow-lg shadow-slate-300 p-2 border-b-2 ">
+        <div className="h-full flex flex-col justify-start gap-4 divide-y-2 divide-slate-200  shadow-lg shadow-slate-300 p-2 border-b-2 ">
             {Array.from(Array(endDate)).map((e, num) => (
                 <Daily
                     key={num}

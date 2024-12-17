@@ -10,11 +10,31 @@ export const usersData = [
             {
                 Monday: "off",
                 Tuesday: "off",
-                Wednesday: ["4:00 pm - 8:00 pm", "8:30 pm - 12:00 am"],
-                Thursday: ["4:00 pm - 8:00 pm", "8:30 pm - 12:00 am"],
-                Friday: ["12:00 pm - 4:00 pm", "4:30 pm - 8:00 pm"],
-                Saturday: ["12:00 pm - 4:00 pm", "4:30 pm - 8:00 pm"],
-                Sunday: ["4:00 pm - 8:00 pm", "8:30 pm - 12:00 am"],
+                Wednesday: {
+                    in: "4:00 pm",
+                    break: "8:00 pm",
+                    out: "12:00 am",
+                },
+                Thursday: {
+                    in: "4:00 pm",
+                    break: "8:00 pm",
+                    out: "12:00 am",
+                },
+                Friday: {
+                    in: "12:00 pm",
+                    break: "4:00 pm",
+                    out: "8:00 am",
+                },
+                Saturday: {
+                    in: "12:00 pm",
+                    break: "4:00 pm",
+                    out: "8:00 am",
+                },
+                Sunday: {
+                    in: "4:00 pm",
+                    break: "8:00 pm",
+                    out: "12:00 am",
+                },
             },
         ],
     },
@@ -27,13 +47,33 @@ export const usersData = [
         dayOff: ["Wednesday", "Thursday"],
         schedule: [
             {
-                Monday: ["8:00 pm - 12:00 am", "12:30 am - 4:00 am"],
-                Tuesday: ["8:00 pm - 12:00 am", "12:30 am - 4:00 am"],
+                Monday: {
+                    in: "8:00 pm",
+                    break: "12:00 am",
+                    out: "4:00 am",
+                },
+                Tuesday: {
+                    in: "8:00 pm",
+                    break: "12:00 am",
+                    out: "4:00 am",
+                },
                 Wednesday: "off",
                 Thursday: "off",
-                Friday: ["8:00 pm - 12:00 am", "12:30 am - 4:00 am"],
-                Saturday: ["8:00 pm - 12:00 am", "12:30 am - 4:00 am"],
-                Sunday: ["8:00 pm - 12:00 am", "12:30 am - 4:00 am"],
+                Friday: {
+                    in: "8:00 pm",
+                    break: "12:00 am",
+                    out: "4:00 am",
+                },
+                Saturday: {
+                    in: "8:00 pm",
+                    break: "12:00 am",
+                    out: "4:00 am",
+                },
+                Sunday: {
+                    in: "8:00 pm",
+                    break: "12:00 am",
+                    out: "4:00 am",
+                },
             },
         ],
     },
@@ -46,11 +86,31 @@ export const usersData = [
         dayOff: ["Saturday", "Sunday"],
         schedule: [
             {
-                Monday: ["4:00 pm - 8:00 pm", "8:30 pm - 12:00 am"],
-                Tuesday: ["4:00 pm - 8:00 pm", "8:30 pm - 12:00 am"],
-                Wednesday: ["4:00 pm - 8:00 pm", "8:30 pm - 12:00 am"],
-                Thursday: ["4:00 pm - 8:00 pm", "8:30 pm - 12:00 am"],
-                Friday: ["4:00 pm - 8:00 pm", "8:30 pm - 12:00 am"],
+                Monday: {
+                    in: "4:00 pm",
+                    break: "8:00 pm",
+                    out: "12:00 am",
+                },
+                Tuesday: {
+                    in: "4:00 pm",
+                    break: "8:00 pm",
+                    out: "12:00 am",
+                },
+                Wednesday: {
+                    in: "4:00 pm",
+                    break: "8:00 pm",
+                    out: "12:00 am",
+                },
+                Thursday: {
+                    in: "4:00 pm",
+                    break: "8:00 pm",
+                    out: "12:00 am",
+                },
+                Friday: {
+                    in: "4:00 pm",
+                    break: "8:00 pm",
+                    out: "12:00 am",
+                },
                 Saturday: "off",
                 Sunday: "off",
             },
@@ -65,13 +125,33 @@ export const usersData = [
         dayOff: ["Friday", "Saturday"],
         schedule: [
             {
-                Monday: ["8:00 am - 12:00 pm", "12:30 pm - 4:00 pm"],
-                Tuesday: ["8:00 am - 12:00 pm", "12:30 pm - 4:00 pm"],
-                Wednesday: ["8:00 am - 12:00 pm", "12:30 pm - 4:00 pm"],
-                Thursday: ["8:00 am - 12:00 pm", "12:30 pm - 4:00 pm"],
+                Monday: {
+                    in: "8:00 am",
+                    break: "12:00 pm",
+                    out: "4:00 pm",
+                },
+                Tuesday: {
+                    in: "8:00 am",
+                    break: "12:00 pm",
+                    out: "4:00 pm",
+                },
+                Wednesday: {
+                    in: "8:00 am",
+                    break: "12:00 pm",
+                    out: "4:00 pm",
+                },
+                Thursday: {
+                    in: "8:00 am",
+                    break: "12:00 pm",
+                    out: "4:00 pm",
+                },
                 Friday: "off",
                 Saturday: "off",
-                Sunday: ["8:00 am - 12:00 pm", "12:30 pm - 4:00 pm"],
+                Sunday: {
+                    in: "8:00 am",
+                    break: "12:00 pm",
+                    out: "4:00 pm",
+                },
             },
         ],
     },
@@ -84,13 +164,35 @@ export const usersData = [
         dayOff: ["Tuesday", "Wednesday"],
         schedule: [
             {
-                Monday: ["12:00 am - 4:00 am", "4:30 am - 8:00 am"],
+                startDate: "",
+                endDate: "",
+                Monday: {
+                    in: "12:00 am",
+                    break: "4:00 am",
+                    out: "8:00 am",
+                },
                 Tuesday: "off",
                 Wednesday: "off",
-                Thursday: ["12:00 am - 4:00 am", "4:30 am - 8:00 am"],
-                Friday: ["12:00 am - 4:00 am", "4:30 am - 8:00 am"],
-                Saturday: ["12:00 am - 4:00 am", "4:30 am - 8:00 am"],
-                Sunday: ["12:00 am - 4:00 am", "4:30 am - 8:00 am"],
+                Thursday: {
+                    in: "12:00 am",
+                    break: "4:00 am",
+                    out: "8:00 am",
+                },
+                Friday: {
+                    in: "12:00 am",
+                    break: "4:00 am",
+                    out: "8:00 am",
+                },
+                Saturday: {
+                    in: "12:00 am",
+                    break: "4:00 am",
+                    out: "8:00 am",
+                },
+                Sunday: {
+                    in: "12:00 am",
+                    break: "4:00 am",
+                    out: "8:00 am",
+                },
             },
         ],
     },
