@@ -30,7 +30,6 @@ const Calendar = () => {
             <div className="grid grid-cols-3 items-center h-12 border-b-2">
                 <IoIosArrowBack
                     onClick={() => {
-                        console.log(month);
                         decreaseMonth();
                     }}
                     className=" justify-self-end hover:cursor-pointer font-bold text-xl"
@@ -40,7 +39,6 @@ const Calendar = () => {
                 </h1>
                 <IoIosArrowForward
                     onClick={() => {
-                        console.log(month);
                         increaseMonth();
                     }}
                     className="justify-self-start hover:cursor-pointer font-bold text-xl"
