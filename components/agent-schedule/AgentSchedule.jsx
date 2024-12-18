@@ -2,11 +2,6 @@ import React from "react";
 import Daily from "../daily/Daily";
 import { useCalendarStore } from "@/store/calendar-store";
 
-function getDayName(dateStr, locale) {
-    var date = new Date(dateStr);
-    return date.toLocaleDateString(locale, { weekday: "long" });
-}
-
 const AgentSchedule = ({ data }) => {
     const { month, year } = useCalendarStore();
     const start = new Date(year, month, 1).getDay();
@@ -14,7 +9,6 @@ const AgentSchedule = ({ data }) => {
     const end = new Date(year, month, endDate).getDay();
     const enddateprev = new Date(year, month, 0).getDate(); //getting the previous month end date
     var dateStr = "05/23/2014";
-    var day = getDayName(dateStr, "en");
     return (
         <div className="h-full flex flex-col justify-start gap-4 divide-y-2 divide-slate-200  shadow-lg shadow-slate-300 p-2 border-b-2 ">
             {Array.from(Array(endDate)).map((e, num) => (

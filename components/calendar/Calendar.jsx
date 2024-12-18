@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useAgentStore } from "@/store/agent-store";
 import AgentSchedule from "@/components/agent-schedule/AgentSchedule";
 import AgentName from "@/components/agent-name/AgentName";
@@ -8,7 +8,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { useCalendarStore } from "@/store/calendar-store";
 
 const Calendar = () => {
-    const { agents } = useAgentStore();
+    const { agents, currentFilter } = useAgentStore();
     const { month, year, increaseMonth, decreaseMonth } = useCalendarStore();
     const months = [
         "January",
@@ -49,15 +49,39 @@ const Calendar = () => {
             <div className="text-sm relative">
                 <IoIosArrowBack className="hover:cursor-pointer absolute top-2 font-bold text-xl" />
                 <div className="grid grid-cols-6 gap-2 mr-4">
-                    {agents.map((user) => (
-                        <AgentName key={user.id} data={user} />
-                    ))}
+                    {currentFilter
+                        ? agents
+                              .filter(
+                                  (agent) =>
+                                      String(agent.id) ===
+                                          String(currentFilter) ||
+                                      String(agent.lob) ===
+                                          String(currentFilter)
+                              )
+                              .map((user) => (
+                                  <AgentName key={user.id} data={user} />
+                              ))
+                        : agents.map((user) => (
+                              <AgentName key={user.id} data={user} />
+                          ))}
                 </div>
                 <IoIosArrowForward className="absolute right-3 top-2 hover:cursor-pointer font-bold text-xl" />
                 <div className="h-[85vh] overflow-y-auto grid grid-cols-6 gap-2">
-                    {agents.map((user) => (
-                        <AgentSchedule key={user.id} data={user} />
-                    ))}
+                    {currentFilter
+                        ? agents
+                              .filter(
+                                  (agent) =>
+                                      String(agent.id) ===
+                                          String(currentFilter) ||
+                                      String(agent.lob) ===
+                                          String(currentFilter)
+                              )
+                              .map((user) => (
+                                  <AgentSchedule key={user.id} data={user} />
+                              ))
+                        : agents.map((user) => (
+                              <AgentSchedule key={user.id} data={user} />
+                          ))}
                 </div>
             </div>
         </div>
