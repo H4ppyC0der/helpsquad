@@ -206,11 +206,31 @@ export const usersData = [
         schedule: [
             {
                 Monday: "off",
-                Tuesday: ["4:00 am - 8:00 am", "8:30 am - 12:00 pm"],
-                Wednesday: ["4:00 am - 8:00 am", "8:30 am - 12:00 pm"],
-                Thursday: ["4:00 am - 8:00 am", "8:30 am - 12:00 pm"],
-                Friday: ["4:00 am - 8:00 am", "8:30 am - 12:00 pm"],
-                Saturday: ["4:00 am - 8:00 am", "8:30 am - 12:00 pm"],
+                Tuesday: {
+                    in: "4:00 am",
+                    break: "8:00 am",
+                    out: "12:00 pm",
+                },
+                Wednesday: {
+                    in: "4:00 am",
+                    break: "8:00 am",
+                    out: "12:00 pm",
+                },
+                Thursday: {
+                    in: "4:00 am",
+                    break: "8:00 am",
+                    out: "12:00 pm",
+                },
+                Friday: {
+                    in: "4:00 am",
+                    break: "8:00 am",
+                    out: "12:00 pm",
+                },
+                Saturday: {
+                    in: "4:00 am",
+                    break: "8:00 am",
+                    out: "12:00 pm",
+                },
                 Sunday: "off",
             },
         ],
