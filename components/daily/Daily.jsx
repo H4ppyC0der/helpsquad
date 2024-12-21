@@ -96,11 +96,9 @@ const Daily = ({ data, day, month, year, dayOff, currentTimezone }) => {
     loginTime?.pop();
     breakTime?.pop();
     logoutTime?.pop();
-    console.log(breakTime);
     const afterBreak =
         breakTime &&
         breakTime[0] + ":" + String(Number(breakTime[1]) + breakDuration);
-    console.log(afterBreak);
     const test = new Date(now_utc).toLocaleString("en-US", {
         timeZone: currentTimezone,
     });
