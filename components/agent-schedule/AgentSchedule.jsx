@@ -1,9 +1,10 @@
+"use client";
 import React from "react";
 import Daily from "../daily/Daily";
 import { useCalendarStore } from "@/store/calendar-store";
 
 const AgentSchedule = ({ data }) => {
-    const { month, year } = useCalendarStore();
+    const { month, year, currentTimezone } = useCalendarStore();
     const start = new Date(year, month, 1).getDay();
     const endDate = new Date(year, month + 1, 0).getDate(); //getting the current month end day
     const end = new Date(year, month, endDate).getDay();
@@ -15,8 +16,11 @@ const AgentSchedule = ({ data }) => {
                 <Daily
                     key={num}
                     data={data.schedule}
-                    currentDate={new Date(year, month, num + 1)}
+                    year={year}
+                    month={month}
+                    day={num + 1}
                     dayOff={data.dayOff}
+                    currentTimezone={currentTimezone}
                 />
             ))}
         </div>

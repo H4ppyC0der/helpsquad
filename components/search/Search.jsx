@@ -23,7 +23,7 @@ const Search = () => {
     };
 
     return (
-        <div className="grid grid-cols-2 mt-4 mb-2">
+        <div className="grid grid-cols-2 my-2">
             <div className="relative">
                 <IoIosCloseCircleOutline
                     onClick={() => {

@@ -1,8 +1,9 @@
 import { create } from "zustand";
 
 export const useCalendarStore = create((set) => ({
-    month: new Date().getMonth(),
-    year: new Date().getFullYear(),
+    month: new Date().getUTCMonth(),
+    year: new Date().getUTCFullYear(),
+    currentTimezone: "Asia/manila",
 
     increaseMonth: () =>
         set((state) => ({
@@ -15,4 +16,6 @@ export const useCalendarStore = create((set) => ({
             month: state.month <= 0 ? 11 : state.month - 1,
             year: state.month <= 0 ? state.year - 1 : state.year,
         })),
+
+    setCurrentTimezone: (newTimezone) => set({ currentTimezone: newTimezone }),
 }));
